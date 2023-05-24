@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int power(int x,int n)  //calculating x power n  (x^n)
+{
+    //base-case
+    if(n==0) return 1;
+    if(n>0)
+    {
+        return x*power(x,n-1);
+    }
+        
+    
+}
+int main()
+{
+    int x;int n;
+    cout<<"Enter the number : "<<endl;
+    cin>>x;
+    cout<<"Enter the power value: "<<endl;
+    cin>>n;
+    cout<<"The desired result is : "<<endl;
+    cout<<power(x,n);
+}
