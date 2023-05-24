@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverse(int i,int j,string &str) //passing by reference as we are printing in the main function...
+{
+	//base case
+	if(i>j) return ;
+	//recursive case
+	swap(str[i],str[j]);
+	return reverse(i+1,j-1,str);
+}
+
+int main() {
+	int i,j;
+	string str;
+	cout<<"Enter the string:"<<endl;
+	cin>>str;
+	reverse(0,str.length()-1,str);
+	cout<<"The reversed string is..."<<str<<endl;
+	return 0;
+}
